@@ -57,7 +57,7 @@ hr {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: wrap;
     gap: 50px;
     flex-wrap: wrap-reverse; /* Importante para não sumir em telas pequenas */
 }
@@ -186,4 +186,5 @@ button:hover { transform: scale(1.05); }
     display: block; 
     position: absolute  ; 
     top: 1090px; 
+
 }
