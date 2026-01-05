@@ -14,11 +14,24 @@ const fuso = document.querySelector('#fuso')
 
 let intervaloLocal = setInterval(relogio, 1000)
 let intervaloMundial = null;
+let intervaloAtivo = null;
 
 btinform.addEventListener('click', informacao)
 calcule.addEventListener('click', mostrarHoraMundial)
 btreset.addEventListener('click', resetaRelogio)
 
+// Função Única de Inicialização
+function iniciarRelogio(funcao, parametro = null) {
+    if (intervaloAtivo) clearInterval(intervaloAtivo); // LIMPA TUDO ANTES DE COMEÇAR
+    
+    // Executa a primeira vez sem delay
+    parametro ? funcao(parametro) : funcao(); 
+    
+    // Define o novo intervalo
+    intervaloAtivo = setInterval(() => {
+        parametro ? funcao(parametro) : funcao();
+    }, 1000);
+}
 
 function informacao(){
     if (como_usa.textContent !== ""){
@@ -135,4 +148,5 @@ function relogio() {
     mes.textContent = String(hoje.getMonth() + 1).padStart(2, '0');
     ano.textContent = hoje.getFullYear();
 }
+
 
