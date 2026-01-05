@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Chronos Global</title>
+</head>
+<body>
+    <h1 class="titulo-principal">Chronos <span>Global</span></h1>
+    <div class="flex5">
+        <p class="txt_principal">O fuso horário é um sistema criado para organizar os horários em diferentes partes do mundo. Como a Terra gira em torno de seu próprio eixo, o Sol não ilumina todos os lugares ao mesmo tempo. Por isso, enquanto em um país é dia, em outro pode ser noite. Para resolver essa diferença, o planeta foi dividido em 24 fusos horários, cada um correspondendo, em média, a 15 graus de longitude e a uma hora de diferença.</p>
+
+        <p class="txt_principal">O ponto de referência dos fusos horários é o Meridiano de Greenwich, localizado em Londres, na Inglaterra. A partir dele, os horários são calculados para o leste (adiantando as horas) e para o oeste (atrasando as horas). Esse horário padrão é chamado de UTC (Tempo Universal Coordenado). Cada país ou região ajusta seu horário com base nessa referência, podendo adotar fusos inteiros ou, em alguns casos, frações de hora.</p>
+        
+        <p class="txt_principal">Os fusos horários são importantes para a organização da vida moderna, pois facilitam a comunicação, o transporte, o comércio internacional e a programação de eventos globais. Sem esse sistema, seria muito difícil coordenar atividades entre países diferentes, como voos internacionais, transmissões ao vivo e reuniões entre pessoas que vivem em partes distantes do mundo.</p>
+    </div>
+    <hr>
+    <div class="flex6">  
+        <div class="flex4">
+            <p id="fuso"></p>
+            <div class="flex2">
+                <div class="relogio">
+                    <span id="horas">00</span>
+                    <span class="txt">Hora</span>
+                </div>           
+                <div class="relogio">
+                    <span id="minutos">00</span>
+                    <span class="txt">Minuto</span>
+                </div>
+                <div class="relogio">
+                    <span id="segundos">00</span>
+                    <span class="txt">Segundo</span>
+                </div>              
+            </div>
+            <div class="data">
+                <span id="dia">00</span>
+                <span>/</span>
+                <span id="mes">00</span>
+                <span>/</span>
+                <span id="ano">0000</span>
+            </div>
+            <details class="referencia-fuso">
+                <summary>🌍 Clique para ver a Tabela de Referência</summary>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Região</th>
+                            <th>Fuso Horário (Entrada no Input)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Brasil (SP/RJ)</td><td>America/Sao_Paulo</td></tr>
+                        <tr><td>Brasil (AM)</td><td>America/Manaus</td></tr>
+                        <tr><td>Brasil (AC)</td><td>America/Rio_Branco</td></tr>
+                        <tr><td>Brasil (PE)</td><td>America/Noronha</td></tr>
+                        <tr><td>Buenos Aires (ARG)</td><td>America/Argentina/Buenos_Aires</td></tr>
+                        <tr><td>Nova York (EUA)</td><td>America/New_York</td></tr>
+                        <tr><td>Los Angeles (EUA)</td><td>America/Los_Angeles</td></tr>
+                        <tr><td>Lisboa (POR)</td><td>Europe/Lisbon</td></tr>
+                        <tr><td>Londres (UK)</td><td>Europe/London</td></tr>
+                        <tr><td>Paris (França)</td><td>Europe/Paris</td></tr>
+                        <tr><td>Madrid (ESP)</td><td>Europe/Madrid</td></tr>
+                        <tr><td>Roma (ITA)</td><td>Europe/Rome</td></tr>
+                        <tr><td>Berlim (GEU)</td><td>Europe/Berlin</td></tr>
+                        <tr><td>Moscovo (RUS)</td><td>Europe/Moscow</td></tr>
+                        <tr><td>Tóquio (JPN)</td><td>Asia/Tokyo</td></tr>
+                        <tr><td>Hong Kong (CN)</td><td>Asia/Hong_Kong</td></tr>
+                        <tr><td>Dubai (EAU)</td><td>Asia/Dubai</td></tr>
+                        <tr><td>Sydney (Austrália)</td><td>Australia/Sydney</td></tr>
+                        <tr><td>Nova Zelândia (Pacific)</td><td>Pacific/Auckland</td></tr>
+                        <tr><td>GMT/UTC (Fuso 0)</td><td>Etc/GMT+0</td></tr>
+                    </tbody>
+                </table>
+                <p class="nota">⚠️ O formato é **sensível a maiúsculas/minúsculas** (Ex: "America/Sao_Paulo").</p>
+            </details> 
+        </div>
+        <div class="conteiner">
+            <div class="flex1">
+                <h2>Descubra a "hora" e "data" de outros países</h1>
+                <button id="btinform">Como Usar</button>
+                <p id="como"></p>
+            </div>
+            <div class="flex3">
+                <h1>Selecione a cidade ou fuso horário IANA:</h1>
+                <input type="text" id="nome" list="lista" placeholder="Ex: São Paulo ou Tokyo...">
+                <datalist id="lista" >
+                    <option value="America/Sao_Paulo">Estados de Alagoas, Amapá, Bahia, Ceará, Pará, Maranhão, Paraíba, Pernambuco, Piauí, Rio Grande do Norte, Sergipe, Tocantins, Distrito Federal, Espírito Santo, Goiás, Minas Gerais, Paraná, Rio de Janeiro, Rio Grande do Sul, Santa Catarina e São Paulo / Brasil</option>
+                    <option value="America/Manaus">Manaus / Amazónia</option>
+                    <option value="America/Rio_Branco"> Como Atalaia do Norte, Benjamin Constant, Boca do Acre, Eirunepé, Envira, Guajará, Ipixuna, Itamarati, Jutaí, Lábrea, Pauini, São Paulo de Olivença, Tabatinga, Acre</option>
+                    <option value="America/Noronha">Fernando de Noronha</option>
+                    <option value="America/New_York">Nova York, Nova Jersey, Massachusetts, EUA</option>
+                    <option value="America/Los_Angeles">Los Angeles, EUA</option>
+                    <option value="America/Argentina/Buenos_Aires">Buenos Aires, Argentina</option>
+
+                    <option value="Europe/Lisbon">Lisboa, Portugal</option>
+                    <option value="Europe/London">Londres, Reino Unido</option>
+                    <option value="Europe/Paris">Paris, França</option>
+                    <option value="Europe/Madrid">Madrid, Espanha</option>
+                    <option value="Europe/Rome">Roma, Itália</option>
+                    <option value="Europe/Berlin">Berlim, Alemanha</option>
+                    <option value="Europe/Moscow">Moscovo, Rússia</option>
+
+                    <option value="Asia/Tokyo">Tóquio, Japão</option>
+                    <option value="Asia/Hong_Kong">Hong Kong, China</option>
+                    <option value="Asia/Dubai">Dubai, Qatar, Emirados Árabes</option>
+                    <option value="Australia/Sydney">Sydney, Austrália</option>
+                    <option value="Pacific/Auckland">Auckland, Nova Zelândia</option>
+                    
+                    <option value="Africa/Cairo">Cairo, Egito</option>
+                    <option value="Africa/Johannesburg">Joanesburgo, África do Sul</option>
+                </datalist>
+                <div class="botao">
+                    <button id="calcule">Ver Horário</button>
+                    <button id="btreset">Resetar</button>  
+                </div>
+                <p id="resultado"></p>
+            </div>
+        </div>
+    </div>     
+    <script src="js/script.js"></script>
+</body>
+</html>

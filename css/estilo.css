@@ -1,0 +1,189 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #ccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; /* Permite que a página cresça com o conteúdo */
+    margin: 0;
+    padding: 40px 20px; /* Padding em vez de margin-top evita quebras */
+    font-family: Arial, sans-serif;
+}
+
+.titulo-principal {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    width: 100%; /* Garante centralização total */
+}
+
+.titulo-principal span {
+    color: #43d46f;
+    font-weight: 300;
+}
+
+.txt_principal {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 5px; 
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.flex5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #000;
+    width: 100%;
+    max-width: 700px;
+    margin: 30px 0;
+    opacity: 0.3;
+}
+
+.flex6 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap-reverse; /* Importante para não sumir em telas pequenas */
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Evita que o container fique gigante */
+    min-height: 500px;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.flex4{margin-bottom: 60px; position: relative;}
+
+.flex2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    gap: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.relogio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    width: 75px;
+    height: 85px;
+    border-radius: 8px;
+}
+
+.relogio span:first-child { font-size: 1.8rem; font-weight: bold; }
+
+.relogio .txt { font-size: 0.7rem; opacity: 0.8; }
+
+.data {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    padding: 12px 25px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-size: 2rem;
+    font-family: monospace;
+}
+
+input {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.botao { display: flex; gap: 20px; }
+
+button {
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+#calcule, #btreset { background: #43d46f; color: white; border: none; }
+
+#btinform { background: #eee; border: 1px solid #ccc; }
+
+button:hover { transform: scale(1.05); }
+
+.referencia-fuso {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.referencia-fuso summary {
+    cursor: pointer;
+    color: #007bff;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.referencia-fuso[open] table {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background: white;
+    border-collapse: collapse;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 300px;
+}
+
+.referencia-fuso td, th { padding: 10px; border: 1px solid #eee; font-size: 0.8rem; }
+
+/* Nota flutuando logo abaixo da tabela automaticamente */
+.nota {
+    display: none;
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+.referencia-fuso[open] .nota { 
+    display: block; 
+    position: absolute  ; 
+    top: 1090px; 
+}
