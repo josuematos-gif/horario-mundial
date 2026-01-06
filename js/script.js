@@ -39,7 +39,7 @@ function informacao(){
     } else {    
         como_usa.textContent = `
             ✅  **COMO USAR:** Digite o Estado, ou fuso horário no formato IANA (Região/Cidade, Ex: Asia/Tokyo).
-            ⚠️  O código NÃO aceita nome de cidade (Ex: "Salvador"). 
+            ⚠️  O código aceita nome de cidade, como entrada, para selecionar fuso horario (Ex: "Salvador"). 
             ➡️  Use o botão "Ver Horário" para atualizar, ou o "Resetar" para voltar à hora local.`;
         como_usa.style.color = "black"
     }
@@ -148,5 +148,6 @@ function relogio() {
     mes.textContent = String(hoje.getMonth() + 1).padStart(2, '0');
     ano.textContent = hoje.getFullYear();
 }
+
 
 
