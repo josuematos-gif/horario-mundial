@@ -1,0 +1,297 @@
+body {
+    display: flex;
+    flex-direction: column; /* Empilha os blocos um embaixo do outro */
+    margin: 0;
+    padding: 10px;          /* Dá um respiro nas bordas */
+    background: #ccc;
+}
+
+header{
+    display: flex;
+    align-items: center;
+
+
+}
+
+.titulo-principal {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    gap: 5px;
+    margin-bottom: 20px;
+
+; /* Garante centralização total */
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    margin-left: 650px;
+    margin-top: 20px;
+  
+
+}
+
+.menu a{
+    padding: 15px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: black;
+    &&:hover{
+        transform: scale(1.1);
+        text-decoration: underline;
+        text-decoration-color: black; /* Cor da linha (ex: dourado) */
+        text-decoration-thickness: 1px; /* Grossura da linha */
+        text-underline-offset: 8px;    /* Distância entre o texto e a linha */
+    }
+}
+
+.menu ul li a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    color: #000000;
+
+}
+
+/*-----CSS do "conteiner-main"-----*/
+.mapa-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/*-----CSS do "conteiner-main"-----*/
+.mapa-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#mapa-mundi {
+    width: 300px; /* Tamanho inicial pequeno */
+    cursor: zoom-in;
+    transition: all 0.4s ease-out; /* Suaviza todas as mudanças */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* 1. A MÁGICA: A Tabebla Expandida flutua no centro */
+#mapa-mundi.expandido {
+    position: fixed; /* Tira do fluxo e fixa na tela */
+    top: 50%;         /* Posiciona o topo no meio da tela */
+    left: 50%;        /* Posiciona o lado esquerdo no meio da tela */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente o elemento */
+    
+    width: 90vw;      /* Ocupa 90% da largura da janela */
+    max-width: 1000px;
+    height: auto;     /* Mantém a proporção */
+    
+    cursor: zoom-out;
+    z-index: 1000;    /* Garante que fique acima do overlay */
+}
+
+/* 2. O OVERLAY: Escurecer o fundo quando expandir */
+/* Usamos ::before no body para criar a camada preta */
+body.mapa-aberto::before {
+    content: "";
+    position: fixed; /* Fixado na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Preto com 80% de opacidade */
+    z-index: 500;  /* Fica abaixo do mapa expandido (1000) mas acima de tudo */
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.instrucao {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.titulo-principal span {
+    color: #43d46f;
+    font-weight: 300;
+}
+
+.flex5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.flex6 {
+    display: flex;
+    align-items: center;
+    margin-left:220px ;
+    margin-bottom: 80px;
+    justify-content: center;
+    flex-direction: wrap;
+    gap: 50px;
+    flex-wrap: wrap-reverse; /* Importante para não sumir em telas pequenas */
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Evita que o container fique gigante */
+    min-height: 500px;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.flex4{margin-bottom: 60px; position: relative;}
+
+.flex7{ display: flex;  }
+
+.flex2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    gap: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.relogio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    width: 75px;
+    height: 85px;
+    border-radius: 8px;
+}
+
+.relogio span:first-child { font-size: 1.8rem; font-weight: bold; }
+
+.relogio .txt { font-size: 0.7rem; opacity: 0.8; }
+
+.data {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    padding: 12px 25px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    font-size: 2rem;
+    font-family: monospace;
+}
+
+input {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/*------CSS dos botões------*/
+.botao { display: flex; gap: 20px; }
+
+button {
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+#calcule, #btreset { background: #43d46f; color: white; border: none; }
+
+#btinform { background: #eee; border: 1px solid #ccc; }
+
+button:hover { transform: scale(1.05); }
+
+.referencia-fuso{
+    background: white;
+    border-collapse: collapse;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 100;
+    width: 500px;
+    height: 900px;
+    margin-left: 10px;
+}
+
+.referencia-fuso button{
+    background: #eeeeee00;
+    border-color: #eeeeee00;
+}
+
+.referencia-fuso button:hover{ color: rgb(43, 30, 221); }
+
+.referencia-fuso td, th { 
+    padding: 10px; 
+    border: 1px solid #eee; 
+    font-size: 1.1rem;
+    
+}
+
+
+/* Nota flutuando logo abaixo da tabela automaticamente */
+.nota {
+    display: none;
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+@media (max-widht: 768px){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul{
+        margin-left: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .flex7{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .referencia-fuso{
+        width: 95%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .flex6{
+        margin-left: 0;
+    }
+
+    .data{
+        font-size: 1.5rem;
+    }
+
+    #mapa-mundi .expandido{
+        width: 95vw;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
