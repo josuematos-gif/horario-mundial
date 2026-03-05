@@ -1,3 +1,4 @@
+
 const dia = document.querySelector('#dia')
 const mes = document.querySelector('#mes')
 const ano = document.querySelector('#ano')
@@ -156,5 +157,3 @@ function relogio() {
     mes.textContent = String(hoje.getMonth() + 1).padStart(2, '0');
     ano.textContent = hoje.getFullYear();
 }
-
-
