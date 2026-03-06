@@ -295,4 +295,21 @@ button:hover { transform: scale(1.05); }
         width: 95vw;
         transform: translate(-50%, -50%) scale(1);
     }
+
+    .referencia-fuso{
+        background: white;
+        border-collapse: collapse;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        z-index: 100;
+        width: 10%;
+        margin-left: 10px;
+    }
+
+    .referencia-fuso td, th { 
+        padding: 10px; 
+        border: 1px solid #eee; 
+        font-size: 1.1rem;
+        
+    }
+
 }
