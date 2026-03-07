@@ -257,7 +257,7 @@ button:hover { transform: scale(1.05); }
     margin-top: 5px;
 }
 
-@media (max-widht: 768px){
+@media (max-widht: 600px){
     
     header{
         flex-direction: column;
@@ -290,23 +290,10 @@ button:hover { transform: scale(1.05); }
         font-size: 1.5rem;
     }
 
-    #mapa-mundi .expandido{
-        width: 95vw;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}   
-
-@media (max-width: 600px) {
-    .referencia-fuso td, 
+      .referencia-fuso td, 
     .referencia-fuso th {
         padding: 8px 5px;   /* Diminui o respiro interno das células */
         font-size: 0.85rem; /* Diminui o tamanho da letra */
-    }
-
-    .flex7 {
-        flex-direction: column; /* Garante que a tabela fique ACIMA do relógio */
-        align-items: center;
-        width: 100%;
     }
 
     /* Ajuste para o link não ficar muito pequeno para o dedo clicar */
@@ -314,5 +301,11 @@ button:hover { transform: scale(1.05); }
         display: block;
         padding: 5px 0;
     }
-}
+    
+    #mapa-mundi .expandido{
+        width: 95vw;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}   
+
 
