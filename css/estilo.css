@@ -239,8 +239,6 @@ button:hover { transform: scale(1.05); }
     border-color: #eeeeee00;
 }
 
-.referencia-fuso button:hover{ color: rgb(43, 30, 221); }
-
 .referencia-fuso td, th { 
     padding: 10px; 
     border: 1px solid #eee; 
@@ -260,6 +258,7 @@ button:hover { transform: scale(1.05); }
 }
 
 @media (max-widht: 768px){
+    
     header{
         flex-direction: column;
         align-items: center;
@@ -295,21 +294,25 @@ button:hover { transform: scale(1.05); }
         width: 95vw;
         transform: translate(-50%, -50%) scale(1);
     }
+}   
 
-    .referencia-fuso{
-        background: white;
-        border-collapse: collapse;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        z-index: 100;
-        width: 10%;
-        margin-left: 10px;
+@media (max-width: 600px) {
+    .referencia-fuso td, 
+    .referencia-fuso th {
+        padding: 8px 5px;   /* Diminui o respiro interno das células */
+        font-size: 0.85rem; /* Diminui o tamanho da letra */
     }
 
-    .referencia-fuso td, th { 
-        padding: 10px; 
-        border: 1px solid #eee; 
-        font-size: 1.1rem;
-        
+    .flex7 {
+        flex-direction: column; /* Garante que a tabela fique ACIMA do relógio */
+        align-items: center;
+        width: 100%;
     }
 
+    /* Ajuste para o link não ficar muito pequeno para o dedo clicar */
+    .referencia-fuso a {
+        display: block;
+        padding: 5px 0;
+    }
 }
+
