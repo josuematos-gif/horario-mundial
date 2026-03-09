@@ -297,8 +297,8 @@ button:hover { transform: scale(1.05); }
         border-collapse: collapse;
         box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         z-index: 100;
-        width: 100rem;
-        height: 300rem;
+        width: 50rem;
+        height: 80rem;
         margin-left: 10px;  
     }
 
