@@ -277,9 +277,13 @@ button:hover { transform: scale(1.05); }
     }
     
     .referencia-fuso{
-        width: 10%;
-        height: auto;
-        margin-left: 0;
+        background: white;
+        border-collapse: collapse;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        z-index: 100;
+        width: 500rem;
+        height: 900rem;
+        margin-left: 10rem;  
     }
 
     .flex6{
