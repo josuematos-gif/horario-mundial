@@ -258,6 +258,14 @@ button:hover { transform: scale(1.05); }
 }
 
 @media (max-widht: 600px){
+
+    body {
+        display: flex;
+        flex-direction: column; /* Empilha os blocos um embaixo do outro */
+        margin: 0;
+        padding: 10px;          /* Dá um respiro nas bordas */
+        background: #ccc;
+    }
     
     header{
         flex-direction: column;
