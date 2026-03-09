@@ -275,9 +275,9 @@ button:hover { transform: scale(1.05); }
         align-items: center;
         gap: 20px;
     }
-
+    
     .referencia-fuso{
-        width: 95%;
+        width: 10%;
         height: auto;
         margin-left: 0;
     }
@@ -290,8 +290,7 @@ button:hover { transform: scale(1.05); }
         font-size: 1.5rem;
     }
 
-      .referencia-fuso td, 
-    .referencia-fuso th {
+    .referencia-fuso td, .referencia-fuso th {
         padding: 8px 5px;   /* Diminui o respiro interno das células */
         font-size: 0.85rem; /* Diminui o tamanho da letra */
     }
@@ -299,7 +298,7 @@ button:hover { transform: scale(1.05); }
     /* Ajuste para o link não ficar muito pequeno para o dedo clicar */
     .referencia-fuso a {
         display: block;
-        padding: 1px 0;
+        padding: 5px 0;
     }
     
     #mapa-mundi .expandido{
