@@ -299,7 +299,7 @@ button:hover { transform: scale(1.05); }
     /* Ajuste para o link não ficar muito pequeno para o dedo clicar */
     .referencia-fuso a {
         display: block;
-        padding: 5px 0;
+        padding: 1px 0;
     }
     
     #mapa-mundi .expandido{
