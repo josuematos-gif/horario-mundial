@@ -281,7 +281,7 @@ button:hover { transform: scale(1.05); }
     .flex7{
         flex-direction: column;
         align-items: center;
-        gap: 0px;
+        gap: 10px;
     }
 
     .flex6{
