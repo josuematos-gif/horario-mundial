@@ -261,7 +261,7 @@ button:hover { transform: scale(1.05); }
 
     body {
         display: flex;
-        flex-direction: column; /* Empilha os blocos um embaixo do outro */
+        flex-direction: row; /* Empilha os blocos um embaixo do outro */
         margin: 0;
         padding: 10px;          /* Dá um respiro nas bordas */
         background: #ccc;
