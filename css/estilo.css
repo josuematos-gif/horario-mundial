@@ -275,16 +275,6 @@ button:hover { transform: scale(1.05); }
         align-items: center;
         gap: 20px;
     }
-    
-    .referencia-fuso{
-        background: white;
-        border-collapse: collapse;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        z-index: 100;
-        width: 500rem;
-        height: 900rem;
-        margin-left: 10rem;  
-    }
 
     .flex6{
         margin-left: 0;
@@ -292,6 +282,16 @@ button:hover { transform: scale(1.05); }
 
     .data{
         font-size: 1.5rem;
+    }
+
+    .referencia-fuso{
+        background: white;
+        border-collapse: collapse;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        z-index: 100;
+        width: 100rem;
+        height: 600rem;
+        margin-left: 10px;  
     }
 
     .referencia-fuso td, .referencia-fuso th {
