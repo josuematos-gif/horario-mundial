@@ -20,8 +20,6 @@ header{
     color: #333;
     gap: 5px;
     margin-bottom: 20px;
-
-; /* Garante centralização total */
 }
 
 .menu ul{
@@ -229,8 +227,8 @@ button:hover { transform: scale(1.05); }
     border-collapse: collapse;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     z-index: 100;
-    width: 500px;
-    height: 900px;
+    width: 400px;
+    height: 600px;
     margin-left: 10px;
 }
 
@@ -239,13 +237,21 @@ button:hover { transform: scale(1.05); }
     border-color: #eeeeee00;
 }
 
+.abrir summary {
+    cursor: pointer;
+    color: cornflowerblue;
+    background-color: #eeeeeea4;
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
 .referencia-fuso td, th { 
     padding: 10px; 
     border: 1px solid #eee; 
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     
 }
-
 
 /* Nota flutuando logo abaixo da tabela automaticamente */
 .nota {
@@ -259,38 +265,71 @@ button:hover { transform: scale(1.05); }
 
 @media (max-width: 400px) {
 
-    body {
+    body{
         display: flex;
-        flex-direction: row; /* Empilha os blocos um embaixo do outro */
-        margin: 0;
-        padding: 10px;          /* Dá um respiro nas bordas */
-        background: #ccc;
+        flex-direction: column; /* Empilha Header -> Tabela -> Relógio */
+        align-items: center; 
+        justify-content: flex-start;
+        overflow-x: hidden; /* Proíbe o deslize para os lados */
+        padding: 10px;
+        width: 100vw;
     }
 
-   header{
-        flex-direction: column;
+    header{
+        display: flex;
         align-items: center;
+        flex-direction: column;
     }
 
     .menu ul{
-        margin-left: 0;
-        padding: 0;
-        justify-content: center;
+        list-style: none;
+        display: flex;
+        margin-left: 0.50rem;
+        margin-top: 10px;
     }
 
-    .flex7{
-        flex-direction: column;
+    .menu a{
+        padding: 15px;
+        display: inline-block;
+        transition: transform 0.2s ease;
+        text-decoration: none;
+        text-decoration: none; /* Remove o sublinhado padrão */
+        color: black;
+        &&:hover{
+            transform: scale(1.1);
+            text-decoration: underline;
+            text-decoration-color: black; /* Cor da linha (ex: dourado) */
+            text-decoration-thickness: 1px; /* Grossura da linha */
+            text-underline-offset: 8px;    /* Distância entre o texto e a linha */
+        }
+    }
+
+    .menu ul li a{
+        text-decoration: none;
+        display: inline-block;
+        font-size: 22px;
+        color: #000000;
+
+    }
+
+   .conteiner2{
+        display: block;
+        padding-bottom: 100px;
+   }
+
+   .flex7 {
+        display: flex;
+        flex-direction: column; /* Tabela fica em cima do Relógio */
         align-items: center;
-        gap: 0px;
+        width: 100%;
+        gap: 20px;
     }
 
-    .flex6{
-        margin-left: 0;
-        
-    }
-
-    .data{
-        font-size: 1.5rem;
+    .flex6 {
+        margin-left: 0; /* Remove qualquer margem que empurre para o lado */
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .referencia-fuso{
@@ -300,7 +339,17 @@ button:hover { transform: scale(1.05); }
         z-index: 100;
         width: 20rem;
         height: 5rem;
-        margin-left: 10rem;  
+         
+    }
+
+    .abrir summary {
+        cursor: pointer;
+        color: cornflowerblue;
+        background-color: #eeeeeea4;
+        border-radius: 20px;
+        font-weight: bold;
+        padding: 10px;
+        width: 10.5rem;
     }
 
     .referencia-fuso td, .referencia-fuso th {
@@ -318,6 +367,52 @@ button:hover { transform: scale(1.05); }
         width: 105vw;
         transform: translate(-50%, -50%) scale(1);
     }
+
+    .flex2 {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        padding: 15px 25px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        gap: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);  
+    }
+
+    .flex4{
+        margin-bottom: 60px; 
+        position: relative;
+    }
+
+    .relogio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        color: #fff;
+        width: 5.0rem;
+        height: 5.0rem;
+        border-radius: 8px;
+    }
+
+    .data {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: white;
+        padding: 12px 25px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        font-size: 2rem;
+        font-family: monospace;
+    }
+
+
 }   
 
 
