@@ -23,39 +23,42 @@
             </nav>
         </header>
         <div class="flex7">  
-            <table class="referencia-fuso">
-                <nav>    
-                    <thead>
-                        <tr>
-                            <th>Região</th>
-                            <th>Fuso Horário (Entrada no Input)</th>
-                        </tr>
-                    </thead>  
-                    <tbody id="tabelaCorpo">
-                        <tr><td>Brasil (SP/RJ)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Sao_Paulo</a></td></tr>
-                        <tr><td>Brasil (AM)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Manaus</a></td></tr>
-                        <tr><td>Brasil (AC)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Rio_Branco</a></td></tr>
-                        <tr><td>Brasil (PE)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Noronha</a></td></tr>
-                        <tr><td>Buenos Aires (ARG)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Argentina/Buenos_Aires</a></td></tr>
-                        <tr><td>Nova York (EUA)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/New_York</a></td></tr>
-                        <tr><td>Los Angeles (EUA)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Los_Angeles</a></td></tr>
-                        <tr><td>Lisboa (POR)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Lisbon</a></td></tr>
-                        <tr><td>Londres (UK)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/London</a></td></tr>
-                        <tr><td>Paris (França)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Paris</a></td></tr>
-                        <tr><td>Madrid (ESP)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Madrid</a></td></tr>
-                        <tr><td>Roma (ITA)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Rome</a></td></tr>
-                        <tr><td>Berlim (GEU)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Berlin</a></td></tr>
-                        <tr><td>Moscovo (RUS)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Moscow</a></td></tr>
-                        <tr><td>Tóquio (JPN)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Asia/Tokyo</a></td></tr>
-                        <tr><td>Hong Kong (CN)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Asia/Hong_Kong</a></td></tr>
-                        <tr><td>Dubai (EAU)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Asia/Dubai</a></td></tr>
-                        <tr><td>Sydney (Austrália)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Australia/Sydney</a></td></tr>
-                        <tr><td>Nova Zelândia (Pacific)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Pacific/Auckland</a></td></tr>
-                        <tr><td>GMT/UTC (Fuso 0)</td><td>Etc/GMT+0</td></tr>
-                    </tbody>
-                </nav>
-                <p class="nota">⚠️ O formato é **sensível a maiúsculas/minúsculas** (Ex: "America/Sao_Paulo").</p>
-            </table>
+            <details class="abrir">
+                <summary>Clique para ver a Tabela de Referência</summary>
+                <table class="referencia-fuso">
+                    <nav>    
+                        <thead>
+                            <tr>
+                                <th>Região</th>
+                                <th>Fuso Horário (Entrada no Input)</th>
+                            </tr>
+                        </thead>  
+                        <tbody id="tabelaCorpo">
+                            <tr><td>Brasil (SP/RJ)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Sao_Paulo</a></td></tr>
+                            <tr><td>Brasil (AM)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Manaus</a></td></tr>
+                            <tr><td>Brasil (AC)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Rio_Branco</a></td></tr>
+                            <tr><td>Brasil (PE)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Noronha</a></td></tr>
+                            <tr><td>Buenos Aires (ARG)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Argentina/Buenos_Aires</a></td></tr>
+                            <tr><td>Nova York (EUA)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/New_York</a></td></tr>
+                            <tr><td>Los Angeles (EUA)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">America/Los_Angeles</a></td></tr>
+                            <tr><td>Lisboa (POR)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Lisbon</a></td></tr>
+                            <tr><td>Londres (UK)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/London</a></td></tr>
+                            <tr><td>Paris (França)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Paris</a></td></tr>
+                            <tr><td>Madrid (ESP)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Madrid</a></td></tr>
+                            <tr><td>Roma (ITA)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Rome</a></td></tr>
+                            <tr><td>Berlim (GEU)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Berlin</a></td></tr>
+                            <tr><td>Moscovo (RUS)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Europe/Moscow</a></td></tr>
+                            <tr><td>Tóquio (JPN)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Asia/Tokyo</a></td></tr>
+                            <tr><td>Hong Kong (CN)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Asia/Hong_Kong</a></td></tr>
+                            <tr><td>Dubai (EAU)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Asia/Dubai</a></td></tr>
+                            <tr><td>Sydney (Austrália)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Australia/Sydney</a></td></tr>
+                            <tr><td>Nova Zelândia (Pacific)</td><td><a href="#nome" href="javascript:void(0)" onclick="preencherInput(this.innerText)">Pacific/Auckland</a></td></tr>
+                            <tr><td>GMT/UTC (Fuso 0)</td><td>Etc/GMT+0</td></tr>
+                        </tbody>
+                    </nav>
+                    <p class="nota">⚠️ O formato é **sensível a maiúsculas/minúsculas** (Ex: "America/Sao_Paulo").</p>
+                </table>
+            </details>
             <p class="nota">⚠️ O formato é **sensível a maiúsculas/minúsculas** (Ex: "America/Sao_Paulo").</p>
             <div class="flex6">  
                 <div class="flex4">
